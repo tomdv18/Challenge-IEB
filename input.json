@@ -1,4 +1,2 @@
-[
-  {"name": "BMA", "buy": 105.22, "sell": 105.59, "timestamp": 1734367423775,"source": "A"},
-  {"name": "BMA", "buy": 105.22, "sell": 105.59, "timestamp": 1734367423776,"source": "B"}
-]
+[{"name": "BMA", "buy": 105.22, "sell": 105.59, "timestamp": 1734367423775,"source": "A"},
+{"name": "BMA", "buy": 105.22, "sell": 105.59, "timestamp": 1734367423776,"source": "B"}]
