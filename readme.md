@@ -26,7 +26,7 @@ El input de las cotizaciones se hace a traves de archivos .json, dentro del arch
     "source": "B"
   },
 ```
-
+Cuando se abre un archivo, se procesan de a una estas estructuras, si a alguna le falta algun campo o valor, se la descartara inmediatamente
 
 ## Funcionamiento
 
