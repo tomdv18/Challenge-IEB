@@ -1,0 +1,51 @@
+[
+  {
+    "name": "FORD",
+    "buy": 84.56,
+    "sell": 84.81,
+    "timestamp": 1734380423561,
+    "source": "A"
+  },
+  {
+    "name": "YPF",
+    "buy": 52.46,
+    "sell": 56.24,
+    "timestamp": 1734364243561,
+    "source": "A"
+  },
+  {
+    "name": "SONY",
+    "buy": 29.78,
+    "sell": 30.49,
+    "timestamp": 1733792855561,
+    "source": "B"
+  },
+  {
+    "name": "CAT",
+    "buy": 51.38,
+    "sell": 53.16,
+    "timestamp": 1734530551561,
+    "source": "A"
+  },
+  {
+    "name": "TESLA",
+    "buy": 82.34,
+    "sell": 83.23,
+    "timestamp": 1733874345561,
+    "source": "A"
+  },
+  {
+    "name": "IEB",
+    "buy": 91.49,
+    "sell": 96.19,
+    "timestamp": 1733784440561,
+    "source": "B"
+  },
+  {
+    "name": "GYMFIT",
+    "buy": 11.79,
+    "sell": 13.61,
+    "timestamp": 1733746081561,
+    "source": "B"
+  }
+]

@@ -1,0 +1,79 @@
+[
+    {
+      "name": "YPF",
+      "buy": 89.24,
+      "sell": 91.39,
+      "timestamp": 1734549800949,
+      "source": "A"
+    },
+    {
+      "name": "PMP",
+      "buy": 70.36,
+      "sell": 73.01,
+      "timestamp": 1734549997949,
+      "source": "A"
+    },
+    {
+      "name": "AZZ",
+      "buy": 43.59,
+      "sell": 48.43,
+      "timestamp": 1734549943949,
+      "source": "B"
+    },
+    {
+      "name": "AMD",
+      "buy": 56.76,
+      "sell": 57.43,
+      "timestamp": 1734548153949,
+      "source": "B"
+    },
+    {
+      "name": "INTEL",
+      "buy": 81.95,
+      "sell": 84.0,
+      "timestamp": 1734549905949,
+      "source": "B"
+    },
+    {
+      "name": "CNN",
+      "buy": 72.56,
+      "sell": 76.76,
+      "timestamp": 1734548726949,
+      "source": "B"
+    },
+    {
+      "name": "LOMA AZUL",
+      "buy": 16.06,
+      "sell": 18.01,
+      "timestamp": 1734548609949,
+      "source": "A"
+    },
+    {
+      "name": "GALE",
+      "buy": 10.6,
+      "sell": 12.92,
+      "timestamp": 1734548107949,
+      "source": "B"
+    },
+    {
+      "name": "AZZ",
+      "buy": 81.19,
+      "sell": 84.97,
+      "timestamp": 1734548925949,
+      "source": "B"
+    },
+    {
+      "name": "BMW",
+      "buy": 13.15,
+      "sell": 13.49,
+      "timestamp": 1734548879949,
+      "source": "A"
+    },
+    {
+      "name": "FORD",
+      "buy": 14.26,
+      "sell": 15.02,
+      "timestamp": 1734549208949,
+      "source": "A"
+    }
+]
