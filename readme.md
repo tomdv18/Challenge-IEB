@@ -36,7 +36,7 @@ Tras ingresarlo, se procedera a procesar las mismas, aqui vemos el ejemplo con e
 
 ![](/imgs/datos1.png)
 
-Notar de que, a pesar de que habia 10 cotizaciones, en las ultimas solo se muestran 8, puesto que algunas cotizaciones se repetian con distinto timestamp, por lo que solo se guarda la mas reciente.
+Notar de que, a pesar de que habia 10 cotizaciones, cuando se solicitan las ultimas cotizaciones solo se muestran 8, puesto que algunas cotizaciones se repetian con distinto timestamp, por lo que solo se guarda la mas reciente.
 
 
 Ahora ingresaremos de input el archivo *datos2.json* que contiene un total de 7 cotizaciones
