@@ -11,17 +11,19 @@ ancho_compra = 8
 ancho_venta = 8
 ancho_source = 5
 
+fuentes = {"A", "B"}
+campos = {"name", "buy", "sell", "timestamp", "source"}
+
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-
-ultimas_cotizaciones = {}
-cotizaciones = []
+ 
+ultimas_cotizaciones = {} # Para tener la ultima cotizacion de cada empresa
+cotizaciones = []  # Para tener el historial de cotizaciones
 
 
 def validar_cotizacion(cotizacion):
 
 
-    campos = {"name", "buy", "sell", "timestamp", "source"}
 
     if not all(key in cotizacion for key in campos):
         logging.error(f"Datos incompletos recibidos: {cotizacion}")
@@ -36,7 +38,7 @@ def validar_cotizacion(cotizacion):
         logging.error(f"Valores de 'buy' o 'sell' invalidos: {cotizacion}")
         return False
 
-    if cotizacion["source"] not in {"A", "B"}:
+    if cotizacion["source"] not in fuentes:
         logging.error(f"Valor de 'source' invalido: {cotizacion}")
         return False
 
@@ -46,10 +48,12 @@ def validar_cotizacion(cotizacion):
 
 def imprimir_ultimas_cotizaciones():
     logging.info("Ultimas cotizaciones:")
-
+    print("\n")
+    i = 0
     for empresa, cotizacion in ultimas_cotizaciones.items():
-        logging.info(f"{empresa:<{ancho_empresa}}\tCompra: {cotizacion['buy']:<{ancho_compra}}  Venta: {cotizacion['sell']:<{ancho_venta}}  Source: {cotizacion['source']:<{ancho_source}}")
-
+        print(f"{str(i) + " " + empresa:<{ancho_empresa}}\tCompra: {cotizacion['buy']:<{ancho_compra}}  Venta: {cotizacion['sell']:<{ancho_venta}}  Source: {cotizacion['source']:<{ancho_source}}")
+        i += 1
+    print("\n")
 
 
 def procesar_archivo(nombre_archivo):
@@ -62,15 +66,25 @@ def procesar_archivo(nombre_archivo):
                     if validar_cotizacion(cotizacion):
                        
                         if cotizacion["name"] not in ultimas_cotizaciones:
-                            ultimas_cotizaciones[cotizacion["name"]] = cotizacion
+                                    ultimas_cotizaciones[cotizacion["name"]] = {
+                                        "buy": cotizacion["buy"],
+                                        "sell": cotizacion["sell"],
+                                        "timestamp": cotizacion["timestamp"],
+                                        "source": cotizacion["source"],
+                                    }
                         else:
-                            if ultimas_cotizaciones[cotizacion["name"]]["timestamp"] < cotizacion["timestamp"]:
-                                ultimas_cotizaciones[cotizacion["name"]] = cotizacion
-                    
-                        logging.info(f"Cotizacion de empresa {cotizacion["name"]} procesada")
+                            if (ultimas_cotizaciones[cotizacion["name"]]["timestamp"] < cotizacion["timestamp"]):
+                                    ultimas_cotizaciones[cotizacion["name"]] = {
+                                        "buy": cotizacion["buy"],
+                                        "sell": cotizacion["sell"],
+                                        "timestamp": cotizacion["timestamp"],
+                                        "source": cotizacion["source"],
+                                        }
+
+                        logging.debug(f"Cotizacion de empresa {cotizacion['name']} procesada")
                         cotizaciones.append(cotizacion)
 
-                logging.info(f"Cotizaciones del archivo {nombre_archivo} procesadas.")
+                logging.info(f"Cotizaciones del archivo {nombre_archivo} procesadas. Total: {len(cotizaciones_archivo)}")
                 imprimir_ultimas_cotizaciones()
 
             except json.JSONDecodeError:
